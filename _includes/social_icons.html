@@ -33,4 +33,7 @@
   {%- if site.email -%}
   <li><a href="mailto:{{- site.email -}}" class="icon fa-envelope"><span class="label">Email</span></a></li>
   {%- endif -%}
+  {%- if site.googlescholar -%}
+  <li><a href="{{- site.googlescholar_url -}}" class="icon-b fa-dribbble"><span class="label">Google Scholar</span></a></li>
+  {%- endif -%}
 </ul>

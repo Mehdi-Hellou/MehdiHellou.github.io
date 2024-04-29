@@ -40,7 +40,7 @@ email: your-email@example.com
 avatar: assets/images/avatar.jpg
 
 # You'll want to customize url and baseurl for your own site:
-baseurl: "/jekyll-theme-prologue" # the subpath of your site, e.g. /blog
+baseurl: "/MehdiHellou" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
 # Social settings
@@ -50,15 +50,23 @@ facebook_url:
 googleplus_url:
 instagram_url:
 linkedin_url:
-github_url:
+github_url: https://github.com/Mehdi-Hellou
 stackoverflow_url:
 pinterest_url:
 slack_url:
 dribbble_url:
+googlescholar_url: https://scholar.google.com/citations?user=7lWDaU4AAAAJ
 
 # Google Analytics Tracking ID goes here:
 google_analytics:
 
 # The following settings are NECESSARY for the Prologue theme to run:
 theme: jekyll-theme-prologue
-collections: [sections]
+collections:
+  sections:
+  researches:
+    output: true
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["footnotes"]

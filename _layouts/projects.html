@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{%- assign _researches = site.researches | sort: 'order' -%}
+{%- include header.html scrolly_nav=_researches -%}
+
+<!-- Main -->
+<div id="main">
+	{%- if page.content != "" -%}
+		{%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
+	{%- endif -%}
+	<!-- Research Items -->
+	{%- for _research in _researches -%}
+		{%- capture _title -%}
+			<a href="{{- _research.url | absolute_url -}}">{{- _research.title -}}</a>
+		{%- endcapture -%}
+		{%- capture _excerpt -%}<p>{{- _research.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
+		{%- capture _link -%}<a href="{{- _research.url | absolute_url -}}">read more</a>{%- endcapture -%}
+		{%- assign _content = _excerpt | append: _link -%}
+		{%- include section.html title=_title content=_content -%}
+	{%- endfor -%}
+</div>
