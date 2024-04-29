@@ -1,7 +1,7 @@
 
 # Introduction
 
-This is my website created from the Prologue Theme with Jekyll. Go on this github for more information.
+This is my website created from the Prologue Theme with Jekyll. Go on this github for more information ().
 
 # Line command to execute:
 
